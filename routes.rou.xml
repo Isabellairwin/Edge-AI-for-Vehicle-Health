@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<routes>
+
+    <!--
+        Vehicle type:
+        - maxSpeed 20 m/s (~72 km/h)  → realistic highway speed
+        - sigma 0.5                    → natural speed variation
+        - Road is 3000 m long          → at 20 m/s takes 150 s to cross
+        - All 5 vehicles depart within first 8 seconds
+        - At t=99s the furthest vehicle has only traveled ~1980 m
+          → ALL vehicles remain on the road for the entire 99-second simulation
+    -->
+    <vType id="car"
+           accel="2.6"
+           decel="4.5"
+           sigma="0.5"
+           length="5"
+           width="2"
+           guiShape="passenger"
+           maxSpeed="20"/>
+
+    <!-- Single route A → B (3000 m road) -->
+    <route id="r0" edges="AB"/>
+
+    <!-- Vehicles depart 2 seconds apart so they spread across the road -->
+    <vehicle id="veh0" type="car" route="r0" depart="0"  color="1,0,0"/>
+    <vehicle id="veh1" type="car" route="r0" depart="2"  color="0,1,0"/>
+    <vehicle id="veh2" type="car" route="r0" depart="4"  color="0,0,1"/>
+    <vehicle id="veh3" type="car" route="r0" depart="6"  color="1,1,0"/>
+    <vehicle id="veh4" type="car" route="r0" depart="8"  color="1,0,1"/>
+
+</routes>

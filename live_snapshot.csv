@@ -1,0 +1,6 @@
+vehicle_id,speed,engine_temp,vibration,health_status
+veh0,19.74,87,1.54,BAD
+veh1,17.6,100,1.45,BAD
+veh2,18.91,109,1.2,BAD
+veh3,19.45,85,0.31,GOOD
+veh4,19.19,75,0.58,GOOD
